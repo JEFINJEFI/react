@@ -1,16 +1,21 @@
-
-import './app.css';
-import Header from './Heder';
+import { useState } from "react";
+import Counter from "./components/counter";
 function App() {
-  const data='jefin sathyekkal'
-  return (
-    <div>
-  
-  <Header data={data}/>
-  
-  <p>hai iam jefin sathyekkla house apdi{data}</p>
- 
 
+  const [count,setCount]= useState(0)
+  
+function Addc(){
+  
+
+  setCount(count+1)
+  console.log(count);
+}
+  return (
+     
+    <div>
+      <button onClick={Addc}>Add</button>
+     <Counter title ='1st counter'count={count}/>
+     <Counter title='2nd conter' count={count}/>
   </div>
   );
 }
