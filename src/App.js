@@ -10,12 +10,17 @@ function Addc(){
   setCount(count+1)
   console.log(count);
 }
+let obj={
+  title:'first counter',
+  count
+}
   return (
      
     <div>
       <button onClick={Addc}>Add</button>
-     <Counter title ='1st counter'count={count}/>
+     <Counter {...obj}/>
      <Counter title='2nd conter' count={count}/>
+     <Counter title='third' count={count}/>
   </div>
   );
 }
